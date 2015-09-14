@@ -1,1 +1,20 @@
-<h1>Welcome to my Awesome Web App</h1>
+<%= link_to image_tag('fh_logo.png', :width => '35px'), 'http://thefirehoseproject.com' %>
+
+<div class="headline">
+  <h1>Hello!</h1>
+  <h2>My name is Nicola, I'm a web developer in training <a href="https://twitter.com/FirehoseProject">@FireHoseProject</a></h2>
+</div>
+
+<p>Visit my Github repositories...
+<ul class="github">
+    <li><%= link_to 'Splurty', 'https://github.com/nicolaguidi/splurty' %></li>
+    <li><%= link_to 'Nomster', 'https://github.com/nicolaguidi/nomster' %></li>
+    <li><%= link_to 'Quiz #1', 'https://github.com/nicolaguidi/quiz1' %></li>
+</ul>
+
+<p>...and my apps hosted on Heroku</p>
+<ul class="heroku">
+    <li><%= link_to 'Splurty', 'https://splurty-nicola-guidi.herokuapp.com' %></li>
+    <li><%= link_to 'Nomster', 'https://nomster-nicola-guidi.herokuapp.com' %></li>
+    <li><%= link_to 'Quiz #1', 'https://quiz1-nicola-guidi.herokuapp.com' %></li>
+</ul>
