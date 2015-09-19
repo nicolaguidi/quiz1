@@ -21,3 +21,24 @@
       <li><%= link_to 'Quiz #1', 'https://quiz1-nicola-guidi.herokuapp.com' %></li>
   </ul>
 </div>
+
+<div class="feedback col-xs-4 col-xs-offset-4">
+  <h4>Would you like to leave a feedback?</h4>
+  <% if flash[:error].present? %>
+      <div class="alert-danger">
+        <%= flash[:error].html_safe %>
+      </div>
+    <% end %>
+  <%= simple_form_for :feedback, :url => static_pages_path do |f| %>
+    <%= f.input :author, :label => "Enter your name" %>
+    <%= f.input :message, :label => "Enter your message" %>
+    <%= f.button :submit %>
+  <% end %>
+
+  <% if @feedbacks.present? %>
+    <% @feedbacks.each do |feedback| %>
+      <p><b><%= feedback.author %></b>: <%= feedback.message %></p>
+
+    <% end %>
+  <% end %>
+</div>
